@@ -1,59 +1,86 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# CoreAlign 🧘‍♀️💻
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+CoreAlign is a comprehensive studio management and customer engagement platform built for modern Pilates and fitness studios. It bridges the gap between studio administration and the client experience by offering a dual-platform solution: a robust **Web Admin Portal** and a sleek **Customer Android App**.
 
-## About Laravel
+Built on a powerful **Laravel** backend with a responsive **React (Inertia.js)** frontend, CoreAlign provides a seamless, lightning-fast experience for both staff and customers.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+---
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## 🌟 The Web Admin Portal (Studio Management)
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+The Web App is designed specifically for studio owners, administrators, and instructors. It provides a highly visual, data-rich environment for managing day-to-day operations.
 
-## Learning Laravel
+### Key Features
+- **Authentication:** Secure Staff and Admin login & signup flows.
+- **Admin Dashboard:** High-level overview of studio performance, recent bookings, and active members.
+- **Member Database:** A comprehensive CRM for managing client profiles, memberships, and visit history.
+- **Booking Management:** Detailed calendars and list views for managing class schedules, instructor assignments, and capacity limits.
+- **Instructor Portal:** A dedicated space for instructors to view their upcoming classes, manage attendance, and review schedules.
+- **Finance Reports:** Deep dive into revenue, membership sales, and transaction history.
+- **Branch Management:** Tools for studios with multiple locations to manage permissions and settings per branch.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
+*Tech Stack:* Laravel, React, Inertia.js, Tailwind CSS, Vite.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+---
 
-## Laravel Sponsors
+## 📱 The Customer Android App (Client Experience)
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+The mobile experience is tailored for studio members, offering a frictionless way to engage with their fitness journey directly from their smartphones.
 
-### Premium Partners
+### Key Features
+- **Splash & Onboarding:** A beautiful introduction to the studio's brand.
+- **Customer Home:** A personalized dashboard showing upcoming classes, membership status, and quick actions.
+- **Class Schedule & Details:** Browse the weekly schedule, view detailed class descriptions (instructor, difficulty, duration), and book a spot instantly.
+- **Membership Management:** Purchase new memberships, view active plans, and track usage.
+- **Payment & Wallet:** Securely add, edit, and confirm credit cards for seamless checkouts.
+- **Checkout Flow:** A smooth transaction experience for buying classes or memberships, complete with success confirmations.
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+*Tech Stack:* Laravel Blade (Mobile-Optimized Web Views), Tailwind CSS.
 
-## Contributing
+---
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+## 🛠️ Technical Setup & Installation
 
-## Code of Conduct
+### Requirements
+- PHP 8.1+
+- Composer
+- Node.js & NPM
+- MySQL or compatible database
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+### Getting Started
 
-## Security Vulnerabilities
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/michelle07-09/CoreAlign.git
+   cd CoreAlign
+   ```
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+2. **Install PHP and Node dependencies:**
+   ```bash
+   composer install
+   npm install
+   ```
 
-## License
+3. **Environment Setup:**
+   ```bash
+   cp .env.example .env
+   php artisan key:generate
+   ```
+   *Make sure to configure your `DB_DATABASE`, `DB_USERNAME`, and `DB_PASSWORD` in the `.env` file.*
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+4. **Run Migrations:**
+   ```bash
+   php artisan migrate
+   ```
+
+5. **Build Assets & Start the Server:**
+   ```bash
+   npm run build
+   php artisan serve
+   ```
+   *The application will automatically detect your device. Access the URL via a desktop browser to view the Admin Web Portal, or via a mobile browser/emulator to view the Customer Android App.*
+
+---
+
+## 🔒 Session Configuration Note
+For the best local development experience on Windows (especially when using `php artisan serve`), the application uses `SESSION_DRIVER=file` by default to prevent concurrent request deadlocks.
